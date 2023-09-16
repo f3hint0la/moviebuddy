@@ -1,0 +1,90 @@
+.movieCard {
+  position: relative;
+  width: 100%;
+}
+
+.movieCard:hover {
+  transform: scale(1.05);
+}
+
+.moviePoster {
+  position: relative;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  color: var(--font-color);
+}
+
+.favorites {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  background: #f3f4f66c;
+  right: 2rem;
+  top: 2rem;
+  border-radius: 100%;
+}
+
+.heart,
+.favorite-heart {
+  color: var(--font-color);
+  font-size: 1.2rem;
+}
+
+.favorite-heart {
+  color: var(--accent);
+}
+
+.movieCard h2 {
+  font-size: 1.125rem;
+  color: #111827;
+  padding-top: 1rem;
+  font-weight: 700;
+}
+
+.features-card {
+  color: #111827;
+  font-size: 0.75rem;
+  justify-content: space-between;
+  font-weight: 500;
+}
+
+.rot {
+  margin-right: 1.5rem;
+}
+
+.release,
+.genre {
+  font-size: 0.75rem;
+  color: #9ca3af;
+}
+
+@media screen and (max-width: 767px) {
+  .movieCard h2 {
+    font-size: 1.6rem;
+  }
+
+  .favorites {
+    width: 4rem;
+    height: 4rem;
+    background: #f3f4f66c;
+  }
+
+  .heart,
+  .favorite-heart {
+    font-size: 2.5rem;
+  }
+
+  .features-card {
+    color: #111827;
+    font-size: 1.2rem;
+  }
+
+  .release,
+  .genre {
+    font-size: 1.2rem;
+    color: #9ca3af;
+  }
+}

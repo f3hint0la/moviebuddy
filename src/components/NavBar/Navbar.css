@@ -1,0 +1,155 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2rem 5.5rem;
+  height: 5rem;
+}
+
+.brand {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.brand a {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.brand img {
+  width: 3.125rem;
+  height: 3.125rem;
+}
+
+.brand h2 {
+  color: var(--font-color);
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 100%;
+}
+
+form {
+  display: flex;
+  flex-direction: row;
+  padding: 1.2rem;
+  width: 40%;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid #fff;
+  border-radius: 0.375rem;
+}
+
+input {
+  width: 100%;
+  background: transparent;
+  font-size: 1rem;
+  border: none;
+  color: var(--font-color);
+  border: none;
+  outline: none;
+}
+
+input::placeholder {
+  color: var(--font-color);
+}
+
+form button {
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.icon {
+  font-size: 1.5rem;
+}
+
+.signIn {
+  display: flex;
+  color: var(--font-color);
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.signIn h2 {
+  font-size: 18px;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5rem;
+}
+
+.signIn button {
+  background: var(--accent);
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: var(--accent);
+  height: 3rem;
+  width: 3rem;
+  align-items: center;
+  border: none;
+}
+
+.signIn img {
+  width: 1.9rem;
+  height: 2rem;
+  flex-shrink: 0;
+}
+
+@media screen and (max-width: 767px) {
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 4rem 3rem;
+    align-items: center;
+  }
+
+  .brand img {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
+  .brand,
+  .signIn {
+    gap: 1rem;
+  }
+
+  .signIn {
+    margin-right: 2rem;
+  }
+
+  form {
+    position: absolute;
+    width: 80%;
+    margin-top: 10rem;
+    padding: 0.6rem 2rem;
+  }
+
+  input {
+    font-size: 1.2rem;
+  }
+
+  .signIn h2 {
+    padding-top: 0.85rem;
+    font-size: 1.2rem;
+  }
+
+  .signIn button {
+    height: 3.5rem;
+    width: 4rem;
+  }
+
+  .signIn img {
+    width: 2rem;
+    height: 2.5rem;
+    flex-shrink: 0;
+  }
+}

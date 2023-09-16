@@ -1,0 +1,95 @@
+.image {
+  height: 100%;
+  min-height: 85vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.content {
+  display: inline-flex;
+  flex-direction: column;
+  width: 50%;
+  color: var(--font-color);
+  align-items: flex-start;
+  padding-top: 8rem;
+  padding-left: 6rem;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 3.5rem;
+}
+
+.features {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  align-items: center;
+}
+
+.imdb {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem 0;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.rot {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem 0;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.overview {
+  padding-bottom: 2rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.trailer-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--accent);
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.375rem;
+}
+
+.trailer-btn .icon {
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 767px) {
+  .image {
+    min-height: 80vh;
+  }
+
+  .content {
+    width: 80%;
+    padding-left: 5rem;
+  }
+
+  .title {
+    padding-top: 2rem;
+  }
+
+  .features {
+    padding-top: 2rem;
+    font-size: 1.2rem;
+  }
+
+  .overview {
+    font-size: 1.5rem;
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+  }
+
+  .trailer-btn {
+    padding: 0.8rem 2rem;
+  }
+}

@@ -1,0 +1,34 @@
+footer {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding-top: 2rem;
+}
+
+.socialLink,
+.quickLink {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.socialLink a,
+.quickLink a {
+  color: #111827;
+  font-size: 1.125rem;
+}
+
+.quickLink {
+  padding-top: 2rem;
+  font-weight: 500;
+}
+
+.copyright {
+  font-size: 1.125rem;
+  color: #6b7280;
+  font-weight: 500;
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
