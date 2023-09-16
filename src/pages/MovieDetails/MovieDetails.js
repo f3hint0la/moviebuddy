@@ -2,7 +2,6 @@ import noimage from "../../assets/image.png";
 import { AiFillStar } from "react-icons/ai";
 import { IoTicket } from "react-icons/io5";
 import { TfiMenuAlt } from "react-icons/tfi";
-import SideNav from "../../components/SideNav/SideNav";
 import Navbar from "../../components/NavBar/Navbar";
 
 const MovieDetails = ({ movie }) => {
@@ -14,27 +13,33 @@ const MovieDetails = ({ movie }) => {
     return utcDate;
   };
 
+  const getTrailerKey = () => {
+    const videos = movie.videos.results;
+    const trailer = videos.find((video) => video.type === "Trailer");
+
+    if (trailer) {
+      return trailer.key;
+    } else {
+      return null;
+    }
+  };
+
+  const trailerKey = getTrailerKey(movie);
+
   return (
     <main>
       <Navbar />
       <div className="videoContainer">
-        {movie.videos && movie.videos.results[0].key ? (
-          <iframe
-            src={`https://www.youtube.com/embed/${movie.videos.results.id}`}
-            data-testid="movie-poster"
-            width={1080}
-            height={500}
-            title="YouTube Trailer"
-          />
-        ) : (
-          <img
-            src={noimage}
-            alt={movie.title}
-            data-testid="movie-poster"
-            width={500}
-            height={500}
-          />
-        )}
+        <iframe
+          trailerKey={trailerKey}
+          src={`https://www.youtube.com/embed/${trailerKey}`}
+          data-testid="movie-poster"
+          width={1080}
+          height={500}
+          title="YouTube Trailer"
+          frameBorder="0"
+          allow="accelerometer; clipboard-write; picute-in-picture"
+        />
       </div>
 
       <div className="unique">
@@ -57,7 +62,7 @@ const MovieDetails = ({ movie }) => {
 
         <div className="rating">
           <AiFillStar className="rating-icon" />
-          <span>{movie.vote_average}</span>
+          <span>{Math.round(movie.vote_average * 100) / 100}</span>
         </div>
       </div>
 

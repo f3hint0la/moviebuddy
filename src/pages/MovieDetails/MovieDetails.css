@@ -3,19 +3,26 @@ main {
   padding-bottom: 6rem;
 }
 
+main .navbar {
+  background: #9b9c9e;
+}
+
+main form {
+  display: none;
+}
+
 .videoContainer {
   position: relative;
   width: 100%;
   overflow: hidden;
-  box-sizing: border-box;
   margin: 0 14rem;
   justify-content: center;
   align-items: center;
+  z-index: 0;
 }
 
 .videoContainer img {
   position: relative;
-  /* width: 100%; */
   justify-content: center;
   background-size: cover;
   background-position: center;
@@ -69,6 +76,7 @@ main h2 {
 main .content {
   color: #111827;
   padding: 0 5rem;
+  font-size: 1rem;
 }
 
 .others {
@@ -89,11 +97,57 @@ button {
   padding: 0.5rem 1.25rem;
   justify-content: center;
   align-items: center;
-  border-radius: 0.375rem;
+  border-radius: 1rem;
   border: none;
 }
 
 .details-icon {
   font-size: 1.2rem;
   color: var(--font-color);
+}
+
+@media screen and (max-width: 767px) {
+  main {
+    overflow: hidden;
+  }
+
+  .videoContainer {
+    margin: 2rem auto;
+    height: 20rem;
+    width: 30rem;
+    border-radius: 2rem;
+  }
+
+  .unique {
+    display: flex;
+    padding: 2rem 5rem;
+  }
+
+  .genre {
+    margin-top: 1rem;
+  }
+
+  main h2 {
+    font-size: 1.6rem;
+  }
+
+  .release,
+  .genre {
+    font-size: 1.2rem;
+  }
+
+  main .content {
+    color: #111827;
+    padding: 0 5rem;
+    font-size: 1.5rem;
+  }
+
+  .others .btn {
+    display: flex;
+    flex-direction: column;
+  }
+
+  button {
+    padding: 1.6rem 1.25rem;
+  }
 }
