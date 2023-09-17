@@ -1,17 +1,9 @@
-import noimage from "../../assets/image.png";
 import { AiFillStar } from "react-icons/ai";
 import { IoTicket } from "react-icons/io5";
 import { TfiMenuAlt } from "react-icons/tfi";
 import Navbar from "../../components/NavBar/Navbar";
 
 const MovieDetails = ({ movie }) => {
-  const formatDate = (toString) => {
-    const date = new Date(toString);
-    const utcDate = `${date.getUTCFullYear()}-${(
-      date.getUTCMonth() + 1
-    ).toString()}-${date.getUTCDate().toString()}`;
-    return utcDate;
-  };
 
   const getTrailerKey = () => {
     const videos = movie.videos.results;
@@ -38,7 +30,7 @@ const MovieDetails = ({ movie }) => {
           height={500}
           title="YouTube Trailer"
           frameBorder="0"
-          allow="accelerometer; clipboard-write; picute-in-picture"
+          allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         />
       </div>
 
@@ -46,7 +38,7 @@ const MovieDetails = ({ movie }) => {
         <h2 data-testid="movie-title">{movie.title}</h2>
 
         <div className="release" data-testid="movie-release-date">
-          {formatDate(movie.release_date)}
+          {new Date (movie.release_date).toISOString()}
         </div>
 
         <div className="runtime" data-testid="movie-runtime">
