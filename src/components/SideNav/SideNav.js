@@ -12,7 +12,6 @@ const SideNav = () => {
     <div className="sideNav">
       <Link to="/" className="logo">
         <img src={logo} alt="logo" />
-        <h2>MovieBuddy</h2>
       </Link>
       <div className="sideNavLink">
         <a href="#">
