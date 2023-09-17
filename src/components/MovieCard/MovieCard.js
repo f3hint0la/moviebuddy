@@ -1,8 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { format } from "date-fns";
-import toast, { Toaster } from "react-hot-toast";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import imdb from "../../assets/imdb.png";
 import rot from "../../assets/rot.png";
@@ -45,14 +43,6 @@ const MovieCard = ({ movie }) => {
     return genreIndex.map((genreId) => movieGenres[genreId]).join(", ");
   };
 
-  const formatDate = (toString) => {
-    const date = new Date(toString);
-    const utcDate = `${date.getUTCFullYear()}-${(
-      date.getUTCMonth() + 1
-    ).toString()}-${date.getUTCDate().toString()}`;
-    return utcDate;
-  };
-
   return (
     <div id="movies" data-testid="movie-card" className="movieCard">
       <div className="moviePoster">
@@ -75,9 +65,7 @@ const MovieCard = ({ movie }) => {
           )}
         </div>
       </div>
-      <p date-test-id="movie-release-date" className="release">{`${formatDate(
-        movie.release_date
-      )}`}</p>
+      <p date-test-id="movie-release-date" className="release">{movie.release_date}</p>
       <h2 data-testid="movie-title">{movie.title}</h2>
       <div className="features features-card">
         <div className="imdb">
